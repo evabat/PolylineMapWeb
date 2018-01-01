@@ -1,0 +1,127 @@
+	body {
+	    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	}
+	
+	.map-control {
+	    background-color: #fff;
+	    border: 1px solid #ccc;
+	    box-shadow: 0 2px 2px rgba(33, 33, 33, 0.4);
+	    font-family: 'Roboto', 'sans-serif';
+	    margin: 10px;
+	    display: none;
+	}
+	
+	#map .map-control {
+	    display: block;
+	}
+	
+	#map {
+	    height: 450px;
+	}
+	
+	.selector-control {
+	    font-size: 14px;
+	    line-height: 30px;
+	    padding-left: 5px;
+	    padding-right: 5px;
+	}
+	
+	.map-container {
+	    height: 600px;
+	}
+	
+	h2 {
+	    color: #80cde5;
+	    text-align: center;
+	    font-weight: 600;
+	    text-shadow: 1.5px 1.5px #279bbe;
+	}
+	
+	#path-name-input {
+	    margin-top: 2.5rem;
+	    margin-left: 3rem;
+	    margin-right: 3rem;
+	    width: calc(100% - 6rem);
+	}
+	
+	.btn {
+	    outline: none !important;
+	}
+	
+	.alert-info {
+	    margin-top: 6.35rem;
+	    font-weight: 500;
+	}
+	
+	.btn-primary {
+	    float: right;
+	}
+	
+	.btn-danger {
+	    float: right;
+	    margin-left: 10px;
+	}
+	
+	.btn-success {
+	    margin-top: 2rem;
+	    margin-left: 3rem;
+	}
+	
+	.btn-warning {
+	    margin-top: 2rem;
+	    float: right;
+	    margin-right: 3rem;
+	}
+	
+	#input-path-frm {
+	    position: relative;
+	}
+	
+	.form-control.has-error {
+	    border-color: #a94442;
+	    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(169, 68, 66, .6);
+	    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(169, 68, 66, .6);
+	}
+	
+	.hide-txt {
+	    display: none;
+	}
+	
+	#path-name-input-error {
+	    text-align: center;
+	    color: #a94442;
+	    width: 100%;
+	    position: absolute;
+	    left: 0;
+	    top: 5px;
+	    font-size: 12px;
+	}
+	
+	.paths-table tr>td:first-child {
+	    vertical-align: middle;
+	}
+	
+	.paths-table tr>td:nth-child(2) {
+	    display: inline-block;
+	}
+	
+	.paths-table thead>tr>th {
+	    text-align: center;
+	    padding-bottom: 15px;
+	}
+	
+	.delete-btn-wrapper {
+	    float: right;
+	}
+	
+	#show-hide-paths:hover,
+	#show-hide-paths:active,
+	#show-hide-paths:focus {
+	    text-decoration: none;
+	    outline: none;
+	}
+	
+	#confirm-modal .btn span {
+	    margin-left: -5px;
+	    margin-right: 5px;
+	}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico" />
+    <title>PolylineMapWeb</title>
+</head>
+
+<body>
+    <div class="map-container col-xl-8 col-md-8 ">
+        <h2>Διαδραστικός χάρτης</h2>
+        <div id="map"></div>
+        <form id="input-path-frm">
+            <input type="text" class="form-control col-md-10 col-sm-10 col-xs-10" id="path-name-input" placeholder="Εισάγετε το όνομα της διαδρομής προς αποθήκευση." required name="pathNameVal" data-msg-required="Παρακαλούμε εισάγετε όνομα διαδρομής για την επιτυχή αποθήκευσή της.">
+            <button class="btn btn-success col-md-5 col-sm-5 col-xs-5" id="savePathBtn" type="submit">
+            <span class="glyphicon glyphicon-floppy-disk"></span>
+            Αποθήκευση
+        </button>
+            <button class="btn btn-warning col-md-5 col-sm-5 col-xs-5" id="clearPathBtn">
+            <span class="glyphicon glyphicon-erase "></span>
+            Καθαρισμός
+        </button>
+        </form>
+    </div>
+    <div class="col-xl-4 col-md-4">
+        <div class="alert alert-info" role="alert">
+            <span class="glyphicon glyphicon-info-sign"></span> Σχεδιάστε μια διαδρομή στον χάρτη για να την αποθηκεύσετε ή επιλέξτε μια αποθηκευμένη διαδρομή από τον κατάλογο για να την προβάλλετε. Επιλέξτε "Καθαρισμός" για το σβήσιμο οποιασδήποτε διαδρομής
+            από τον χάρτη. Μπορείτε επίσης να διαγράψετε μια αποθηκευμένη διαδρομή.
+        </div>
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a id="show-hide-paths" data-toggle="collapse" href="#collapse1">
+                            <span>Προβολή</span>
+                            <span class="hide-txt">Απόκρυψη</span> καταλόγου
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapse1" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <table class="table paths-table">
+                            <thead>
+                                <tr>
+                                    <th>Διαθέσιμες διαδρομές</th>
+                                </tr>
+                            </thead>
+                            <tbody id="paths-tbl-tbody">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="confirm-modal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-sm">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Επιβεβαίωση</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Είστε σίγουροι ότι θέλετε να διαγράψετε την παρούσα διαδρομή;</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger btn-remove-record">
+                        <span class="glyphicon glyphicon-floppy-remove"></span>Διαγραφή</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">
+                        <span class="glyphicon glyphicon-remove-circle"></span>Ακύρωση</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBmsb3WvhgPJDUI_V5F2Cs5kLBhsGID8xQ"></script>
+    <script src="assets/js/jquery-3.2.1.min.js "></script>
+    <script src="assets/js/bootstrap.min.js "></script>
+    <script src="assets/js/jquery-tmpl.min.js"></script>
+    <script src="assets/js/bootstrap-growl.min.js "></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js "></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-database.js "></script>
+    <script src="assets/js/firebase-init.js "></script>
+    <script src="assets/js/jquery-validate.min.js"></script>
+    <script src="assets/js/script.js" defer async></script>
+
+</body>
+
+</html>
